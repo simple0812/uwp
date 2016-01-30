@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="DialogDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DialogDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    RequestedTheme="Light"
+    mc:Ignorable="d">
+
+    <StackPanel Name="sp" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button Content="btnTest" Name="btnTest" Width="142" Height="70" Click="ButtonBase_OnClick">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Orange" Offset="0"/>
+                    <GradientStop Color="GreenYellow" Offset="0.5"/>
+                    <GradientStop Color="Orange" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        
+        <FlyoutPresenter>
+            <TextBlock Text="xxxx"></TextBlock>
+        </FlyoutPresenter>
+        <StackPanel>
+            <ListView>
+                <ListViewItem>
+                    <TextBlock Text="aaaa"></TextBlock>
+                </ListViewItem>
+                <ListViewItem>
+                    <TextBlock Text="aaaa"></TextBlock>
+                </ListViewItem>
+                <ListViewItem>
+                    <TextBlock Text="aaaa"></TextBlock>
+                </ListViewItem>
+            </ListView>
+        </StackPanel>
+    </StackPanel>
+</Page>

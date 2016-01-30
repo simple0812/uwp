@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots >
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
+    <RootType FullName="CommonDemo.Commands.TestCommand" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Page">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
+      <RootMethod Name="GetBehaviors" />
+      <RootMethod Name="SetBehaviors" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Fill" />
+      <RootProperty Name="RenderTransformOrigin" />
+    </RootType>
+    <RootType FullName="CommonDemo.Behaviors.BtnGetFocusBehavior" />
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.EventTriggerBehavior">
+      <RootProperty Name="EventName" />
+      <RootProperty Name="Actions" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.InvokeCommandAction">
+      <RootProperty Name="Command" />
+      <RootProperty Name="CommandParameter" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="CommonDemo.MainPage" />
+  </Roots.RootTypes>
+</Roots>

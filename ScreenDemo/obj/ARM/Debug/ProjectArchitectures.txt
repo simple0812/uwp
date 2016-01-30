@@ -1,0 +1,1 @@
+E:\git_projects\UWP\uwp\ScreenDemo\ScreenDemo.csproj;arm

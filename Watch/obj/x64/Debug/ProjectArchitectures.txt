@@ -1,0 +1,1 @@
+E:\git_projects\UWP\uwp\Watch\Watch.csproj;x64

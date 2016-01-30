@@ -1,0 +1,14 @@
+﻿<Application
+    x:Class="CommonDemo.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CommonDemo"
+    xmlns:commands="using:CommonDemo.Commands"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <ResourceDictionary>
+            <commands:TestCommand x:Key="TestCommand"></commands:TestCommand>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+

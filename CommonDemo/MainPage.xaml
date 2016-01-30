@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="CommonDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CommonDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:metadata="using:System.Reflection.Metadata"
+    xmlns:behaviors="using:CommonDemo.Behaviors"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="btn" Content="TestWithActionAndParameter">
+            <interactivity:Interaction.Behaviors>
+                <behaviors:BtnGetFocusBehavior />
+                <core:EventTriggerBehavior EventName="DoubleTapped">
+                    <core:InvokeCommandAction Command="{StaticResource TestCommand}" CommandParameter="aaa"/>
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+        </Button>
+
+        <Ellipse  Width="100" Height="100" Fill="#FF1E5FBD" RenderTransformOrigin="0.5,0.5" >
+            <interactivity:Interaction.Behaviors>
+                <behaviors:BtnGetFocusBehavior />
+            </interactivity:Interaction.Behaviors>
+        </Ellipse>
+    </StackPanel>
+</Page>
