@@ -114,6 +114,9 @@
         </Style>
     </Page.Resources>
     <StackPanel DataContext="{StaticResource Person}" Orientation="Vertical" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel Height="60" VerticalAlignment="Center" >
+            <TextBox Text="XXX" RelativePanel.AlignVerticalCenterWithPanel="True" ></TextBox>
+        </RelativePanel>
         <Button Content="Button" Style="{StaticResource btn_140x70_red}" ></Button>
         <Button Content="Button" Style="{StaticResource btn_140x70}" ></Button>
         <Button Content="{Binding Name}"  Name="btn" ></Button>

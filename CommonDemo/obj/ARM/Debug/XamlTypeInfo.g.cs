@@ -13,7 +13,7 @@ namespace CommonDemo
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-    private global::CommonDemo.CommonDemo_XamlTypeInfo.XamlTypeInfoProvider _provider;
+    private global::CommonDemo.CommandDemo_XamlTypeInfo.XamlTypeInfoProvider _provider;
 
         /// <summary>
         /// GetXamlType(Type)
@@ -22,7 +22,7 @@ namespace CommonDemo
         {
             if(_provider == null)
             {
-                _provider = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByType(type);
         }
@@ -34,7 +34,7 @@ namespace CommonDemo
         {
             if(_provider == null)
             {
-                _provider = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByName(fullName);
         }
@@ -49,7 +49,7 @@ namespace CommonDemo
     }
 }
 
-namespace CommonDemo.CommonDemo_XamlTypeInfo
+namespace CommonDemo.CommandDemo_XamlTypeInfo
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -227,8 +227,8 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
-            global::CommonDemo.CommonDemo_XamlTypeInfo.XamlSystemBaseType xamlType = null;
-            global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType userType;
+            global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType userType;
             string typeName = _typeNameTable[typeIndex];
             global::System.Type type = _typeTable[typeIndex];
 
@@ -236,7 +236,7 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
             {
 
             case 0:   //  CommonDemo.Commands.TestCommand
-                userType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommonDemo.Commands.CommandBase"));
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommonDemo.Commands.CommandBase"));
                 userType.Activator = Activate_0_TestCommand;
                 userType.AddMemberName("CanExecute");
                 userType.SetIsLocalType();
@@ -244,42 +244,42 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
                 break;
 
             case 1:   //  CommonDemo.Commands.CommandBase
-                userType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 2:   //  Object
-                xamlType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 3:   //  Boolean
-                xamlType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 4:   //  Microsoft.Xaml.Interactivity.Interaction
-                userType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
             case 5:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
-                userType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
                 userType.CollectionAdd = VectorAdd_5_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 6:   //  Windows.UI.Xaml.DependencyObjectCollection
-                xamlType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 7:   //  Windows.UI.Xaml.DependencyObject
-                xamlType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 8:   //  CommonDemo.Behaviors.BtnGetFocusBehavior
-                userType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.Activator = Activate_8_BtnGetFocusBehavior;
                 userType.AddMemberName("AssociatedObject");
                 userType.SetIsLocalType();
@@ -287,7 +287,7 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
                 break;
 
             case 9:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
-                userType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.Activator = Activate_9_EventTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions");
                 userType.AddMemberName("Actions");
@@ -298,18 +298,18 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
                 break;
 
             case 10:   //  Microsoft.Xaml.Interactivity.ActionCollection
-                userType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
                 userType.CollectionAdd = VectorAdd_10_ActionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 11:   //  String
-                xamlType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 12:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
-                userType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.Activator = Activate_12_InvokeCommandAction;
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParameter");
@@ -320,28 +320,28 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
                 break;
 
             case 13:   //  System.Windows.Input.ICommand
-                userType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 14:   //  Windows.UI.Xaml.Data.IValueConverter
-                xamlType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 15:   //  CommonDemo.MainPage
-                userType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_15_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 16:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 17:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
@@ -449,89 +449,89 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember xamlMember = null;
-            global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType userType;
+            global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember xamlMember = null;
+            global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType userType;
 
             switch (longMemberName)
             {
             case "CommonDemo.Commands.TestCommand.CanExecute":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommonDemo.Commands.TestCommand");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "CanExecute", "Boolean");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommonDemo.Commands.TestCommand");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "CanExecute", "Boolean");
                 xamlMember.Getter = get_0_TestCommand_CanExecute;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
                 xamlMember.Getter = get_1_Interaction_Behaviors;
                 xamlMember.Setter = set_1_Interaction_Behaviors;
                 break;
             case "CommonDemo.Behaviors.BtnGetFocusBehavior.AssociatedObject":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommonDemo.Behaviors.BtnGetFocusBehavior");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommonDemo.Behaviors.BtnGetFocusBehavior");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
                 xamlMember.Getter = get_2_BtnGetFocusBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_3_EventTriggerBehavior_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "EventName", "String");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "EventName", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_4_EventTriggerBehavior_EventName;
                 xamlMember.Setter = set_4_EventTriggerBehavior_EventName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_5_EventTriggerBehavior_SourceObject;
                 xamlMember.Setter = set_5_EventTriggerBehavior_SourceObject;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.AssociatedObject":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
                 xamlMember.Getter = get_6_EventTriggerBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.Command":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_7_InvokeCommandAction_Command;
                 xamlMember.Setter = set_7_InvokeCommandAction_Command;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.CommandParameter":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_8_InvokeCommandAction_CommandParameter;
                 xamlMember.Setter = set_8_InvokeCommandAction_CommandParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverter":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "InputConverter", "Windows.UI.Xaml.Data.IValueConverter");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "InputConverter", "Windows.UI.Xaml.Data.IValueConverter");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_9_InvokeCommandAction_InputConverter;
                 xamlMember.Setter = set_9_InvokeCommandAction_InputConverter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterParameter":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "InputConverterParameter", "Object");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "InputConverterParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_10_InvokeCommandAction_InputConverterParameter;
                 xamlMember.Setter = set_10_InvokeCommandAction_InputConverterParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterLanguage":
-                userType = (global::CommonDemo.CommonDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
-                xamlMember = new global::CommonDemo.CommonDemo_XamlTypeInfo.XamlMember(this, "InputConverterLanguage", "String");
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "InputConverterLanguage", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_11_InvokeCommandAction_InputConverterLanguage;
                 xamlMember.Setter = set_11_InvokeCommandAction_InputConverterLanguage;
@@ -590,9 +590,9 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
 
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlUserType : global::CommonDemo.CommonDemo_XamlTypeInfo.XamlSystemBaseType
+    internal class XamlUserType : global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType
     {
-        global::CommonDemo.CommonDemo_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::CommonDemo.CommandDemo_XamlTypeInfo.XamlTypeInfoProvider _provider;
         global::Windows.UI.Xaml.Markup.IXamlType _baseType;
         bool _isArray;
         bool _isMarkupExtension;
@@ -606,7 +606,7 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
         global::System.Collections.Generic.Dictionary<string, string> _memberNames;
         global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(global::CommonDemo.CommonDemo_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
+        public XamlUserType(global::CommonDemo.CommandDemo_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
             _provider = provider;
@@ -798,7 +798,7 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {
-        global::CommonDemo.CommonDemo_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::CommonDemo.CommandDemo_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -807,7 +807,7 @@ namespace CommonDemo.CommonDemo_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(global::CommonDemo.CommonDemo_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::CommonDemo.CommandDemo_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;
