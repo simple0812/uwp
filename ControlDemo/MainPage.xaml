@@ -6,6 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Transitions>
+        <TransitionCollection>
+            <EntranceThemeTransition IsStaggeringEnabled="True" FromHorizontalOffset="20" FromVerticalOffset="50"></EntranceThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
     <Page.Resources>
         <DataTemplate x:Key="SearchTemplate">
             <Grid Height="320" Width="320" >
@@ -61,5 +66,42 @@
                 </Flyout>
             </FlyoutBase.AttachedFlyout>
         </TextBox>
+        <StackPanel Margin="120 0 0 0">
+
+            <Button Name="btnClose" Content="关闭全部 Popup" Click="btnClose_Click" />
+            <Button Name="btnOpen1" Content="打开Popup1" Click="pp1_Click" />
+            <Button Name="btnOpen2" Content="打开Popup2" Click="pp2_Click" />
+
+            <Popup Name="pp1" HorizontalOffset="0" VerticalOffset="50" IsLightDismissEnabled="False" IsOpen="True">
+                <Popup.Child>
+                    <Border BorderBrush="Red" BorderThickness="1" Background="Blue" Width="200" Height="200">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="我是 Popup" FontSize="24.667" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+                </Popup.Child>
+                <Popup.ChildTransitions>
+                    <TransitionCollection>
+                        <PopupThemeTransition />
+                    </TransitionCollection>
+                </Popup.ChildTransitions>
+            </Popup>
+
+            <Popup Name="pp2"  HorizontalOffset="0" VerticalOffset="250" IsLightDismissEnabled="False" IsOpen="True">
+                <Popup.Child>
+                    <Border BorderBrush="Red" BorderThickness="1" Background="Blue" Width="200" Height="200">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="我是 Popup" FontSize="24.667" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+                </Popup.Child>
+                <Popup.ChildTransitions>
+                    <TransitionCollection>
+                        <EdgeUIThemeTransition Edge="Right" />
+                    </TransitionCollection>
+                </Popup.ChildTransitions>
+            </Popup>
+
+        </StackPanel>
     </StackPanel>
 </Page>

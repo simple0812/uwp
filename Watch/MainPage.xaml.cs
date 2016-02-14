@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -18,6 +19,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Shapes;
+using Microsoft.VisualBasic.CompilerServices;
 
 //“空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409 上有介绍
 
@@ -31,38 +33,51 @@ namespace Watch
         public MainPage()
         {
             this.InitializeComponent();
-            InitWatch();
-            DispatcherTimer dt = new DispatcherTimer {Interval = new TimeSpan(0, 0, 1)};
-            dt.Tick += (obj, e) =>
-            {
-                SetTime();
-            };
+            InitWatch(cvs);
+            InitWatch(cvsx);
 
-            dt.Start();
+            //使用Storyboard实现动画
+            sb.Begin();
+            Animate();
         }
 
-        private  void SetTime()
+        //使用定时器实现动画
+        private async void Animate()
+        {
+            SetTime(cvs);
+            await Task.Delay(1000);
+            Animate();
+        }
+
+        private void SetTime(Canvas canvas)
         {
             var time = DateTime.Now;
             double curHour = time.Hour % 12;
             double curMinute = time.Minute;
             double curSecond = time.Second;
 
-            hour.RenderTransform = new RotateTransform
+            List<Line> lines = TreeHelper.FindChildren<Line>(canvas);
+
+            if(lines.Count < 3) return;
+            var xhour = lines[2];
+            var xminute = lines[1];
+            var xsecond = lines[0];
+
+            xhour.RenderTransform = new RotateTransform
             {
                 CenterX = 100,
                 CenterY = 100,
                 Angle = curHour * 30 + curMinute / 2
             };
 
-            minute.RenderTransform = new RotateTransform
+            xminute.RenderTransform = new RotateTransform
             {
                 CenterX = 100,
                 CenterY = 100,
-                Angle = curMinute * 6 + curSecond  / 10
+                Angle = curMinute * 6 + curSecond / 10
             };
 
-            second.RenderTransform = new RotateTransform
+            xsecond.RenderTransform = new RotateTransform
             {
                 CenterX = 100,
                 CenterY = 100,
@@ -70,7 +85,7 @@ namespace Watch
             };
         }
 
-        private void InitWatch()
+        private void InitWatch(Canvas canvas)
         {
             for (int i = 0; i < 60; i++)
             {
@@ -92,8 +107,10 @@ namespace Watch
                     RenderTransform = new RotateTransform() { CenterX = 100, CenterY = 100, Angle = i * 6 }
                 };
 
-                cvs.Children.Add(line);
+                canvas.Children.Add(line);
             }
+
+            SetTime(canvas);
         }
     }
 }

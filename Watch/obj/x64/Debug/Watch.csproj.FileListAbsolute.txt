@@ -193,3 +193,4 @@ E:\git_projects\UWP\uwp\Watch\obj\x64\Debug\qualifiers.txt
 E:\git_projects\UWP\uwp\Watch\obj\x64\Debug\qualifiers.txt.intermediate
 E:\git_projects\UWP\uwp\Watch\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 E:\git_projects\UWP\uwp\Watch\obj\x64\Debug\ProjectArchitectures.txt
+E:\git_projects\UWP\uwp\Watch\obj\x64\Debug\Watch.csprojResolveAssemblyReference.cache

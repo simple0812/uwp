@@ -7,6 +7,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     RequestedTheme="Dark"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Storyboard x:Name="sb">
+            <DoubleAnimation Duration="00:01:00" By="360" RepeatBehavior="Forever" Storyboard.TargetName="secondx" Storyboard.TargetProperty="(Line.RenderTransform).(RotateTransform.Angle)"
+                             ></DoubleAnimation>
+            <DoubleAnimation Duration="01:00:00" By="360" RepeatBehavior="Forever" Storyboard.TargetName="minutex" Storyboard.TargetProperty="(Line.RenderTransform).(RotateTransform.Angle)"
+                             ></DoubleAnimation>
+            <DoubleAnimation Duration="23:59:59" By="360" RepeatBehavior="Forever" Storyboard.TargetName="hourx" Storyboard.TargetProperty="(Line.RenderTransform).(RotateTransform.Angle)"
+                             ></DoubleAnimation>
+        </Storyboard>
+    </Page.Resources>
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel Width="200" Height="200">
             <Canvas Name="cvs" >
@@ -15,6 +25,19 @@
                 <Line Name="second" StrokeThickness="1"  Stroke="White"  X1="100" X2="100" Y1="20" Y2="110"></Line>
                 <Line Name="minute" StrokeThickness="2"  Stroke="White"  X1="100" X2="100" Y1="35" Y2="110"></Line>
                 <Line Name="hour" StrokeThickness="4"  Stroke="White"  X1="100" X2="100" Y1="50" Y2="110">
+                    <Line.RenderTransform>
+                        <RotateTransform CenterX="100" CenterY="100"></RotateTransform>
+                    </Line.RenderTransform>
+                </Line>
+            </Canvas>
+        </StackPanel>
+        <StackPanel Width="200" Height="200">
+            <Canvas Name="cvsx" >
+                <Ellipse Width="200" Height="200" Canvas.Left="0" Stroke="White" StrokeThickness="2"></Ellipse>
+                <Ellipse Canvas.Left="95" Canvas.Top="95" Width="10" Height="10" Fill="White"></Ellipse>
+                <Line Name="secondx" StrokeThickness="1"  Stroke="White"  X1="100" X2="100" Y1="20" Y2="110"></Line>
+                <Line Name="minutex" StrokeThickness="2"  Stroke="White"  X1="100" X2="100" Y1="35" Y2="110"></Line>
+                <Line Name="hourx" StrokeThickness="4"  Stroke="White"  X1="100" X2="100" Y1="50" Y2="110">
                     <Line.RenderTransform>
                         <RotateTransform CenterX="100" CenterY="100"></RotateTransform>
                     </Line.RenderTransform>

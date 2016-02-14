@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <TextBox  x:Name="tb" Grid.Row="0"  Grid.Column="0" Height="40"></TextBox>
         <Button Content="跳转"  Grid.Row="0" Click="ButtonBase_OnClick" Grid.Column="1"></Button>
-        <WebView  Source="ms-appx-web:///html/index.html"  Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0"  Name="wv" ScriptNotify="WebView_OnScriptNotify" VerticalAlignment="Stretch"></WebView>
+        <WebView Source="ms-appx-web:///html/index.html"  Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0"  Name="wv" ScriptNotify="WebView_OnScriptNotify" VerticalAlignment="Stretch"></WebView>
         <Button Grid.Row="2" Grid.Column="0" Content="InvokeJs" Click="InvokeJs_OnClick"></Button>
     </Grid>
 </Page>

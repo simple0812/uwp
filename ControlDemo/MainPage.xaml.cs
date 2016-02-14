@@ -62,5 +62,23 @@ namespace ControlDemo
                 FlyoutBase.ShowAttachedFlyout(element);
             }
         }
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            // VisualTreeHelper 中新增了 GetOpenPopups() 方法，可以获取可视树中的全部 Popup 对象
+            var popups = VisualTreeHelper.GetOpenPopups(Window.Current);
+            foreach (var popup in popups)
+            {
+                popup.IsOpen = false;
+            }
+        }
+        private void pp1_Click(object sender, RoutedEventArgs e)
+        {
+            pp1.IsOpen = true;
+        }
+
+        private void pp2_Click(object sender, RoutedEventArgs e)
+        {
+            pp2.IsOpen = true;
+        }
     }
 }

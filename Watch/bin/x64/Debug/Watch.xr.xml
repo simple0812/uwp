@@ -6,25 +6,38 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.Storyboard">
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetTargetName" />
+      <RootMethod Name="SetTargetName" />
+      <RootMethod Name="GetTargetProperty" />
+      <RootMethod Name="SetTargetProperty" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.DoubleAnimation">
+      <RootProperty Name="Duration" />
+      <RootProperty Name="By" />
+      <RootProperty Name="RepeatBehavior" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Background" />
       <RootProperty Name="Children" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
       <RootProperty Name="Name" />
-      <RootProperty Name="Background" />
       <RootProperty Name="Children" />
       <RootMethod Name="GetLeft" />
       <RootMethod Name="SetLeft" />
       <RootMethod Name="GetTop" />
       <RootMethod Name="SetTop" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -40,6 +53,11 @@
       <RootProperty Name="X2" />
       <RootProperty Name="Y1" />
       <RootProperty Name="Y2" />
+      <RootProperty Name="RenderTransform" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.RotateTransform">
+      <RootProperty Name="CenterX" />
+      <RootProperty Name="CenterY" />
     </RootType>
     <RootType FullName="Watch.MainPage" />
   </Roots.RootTypes>

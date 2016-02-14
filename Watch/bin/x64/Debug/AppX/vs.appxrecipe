@@ -10,19 +10,25 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>90302696-ace0-4998-8fd7-8fe99856e70a</PackageIdentityName>
     <IntermediateOutputPath>E:\git_projects\UWP\uwp\Watch\obj\x64\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>8DB0784EB12C5E0C00092096645AD8E8DF95A336562D1DB66E5B770BA16A0E8F</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>7C29B6D5C6FA4650C738911185E65E01CAB784EB6790B389B3A597ACE1AAC69E</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>90302696-ace0-4998-8fd7-8fe99856e70a_1.0.0.0_x64__k5rw3tnpwff1y</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>90302696-ace0-4998-8fd7-8fe99856e70a_k5rw3tnpwff1y!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>90302696-ace0-4998-8fd7-8fe99856e70a</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=zhanglei_yf</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="E:\git_projects\UWP\uwp\Watch\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-28T03:42:26.721</Modified>
+      <Modified>2016-02-14T02:56:16.307</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\git_projects\UWP\uwp\Watch\bin\x64\Debug\Watch.exe">
       <PackagePath>entrypoint\Watch.exe</PackagePath>
-      <Modified>2016-01-28T03:42:25.841</Modified>
+      <Modified>2016-02-14T02:56:16.009</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\zhanglei_yf\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -458,7 +464,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\git_projects\UWP\uwp\Watch\bin\x64\Debug\Watch.xr.xml">
       <PackagePath>Watch.xr.xml</PackagePath>
-      <Modified>2016-01-28T03:39:33.931</Modified>
+      <Modified>2016-02-14T02:14:08.393</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -466,11 +472,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\git_projects\UWP\uwp\Watch\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-01-28T03:42:26.582</Modified>
+      <Modified>2016-02-14T02:42:49.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\git_projects\UWP\uwp\Watch\bin\x64\Debug\Core\Watch.exe">
       <PackagePath>Watch.exe</PackagePath>
-      <Modified>2016-01-28T03:42:26.719</Modified>
+      <Modified>2016-02-14T02:56:16.307</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
