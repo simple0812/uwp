@@ -18,5 +18,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <ProgressRing x:Name="pr" Width="40" Height="40" IsActive="False" ></ProgressRing>
     </Grid>
 </Page>

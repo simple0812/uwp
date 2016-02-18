@@ -10,19 +10,19 @@ using Windows.UI.Xaml.Data;
 
 namespace ListViewDemo.Models
 {
-    class IncrementalLoadingList : ObservableCollection<Article>, ISupportIncrementalLoading
+    public abstract class IncrementalLoadingList<T> : ObservableCollection<T>, ISupportIncrementalLoading
     {
-        internal delegate void DataLoadingEventHandler();
-
-        internal delegate void DataLoadedEventHandler();
+        public delegate void DataLoadingEventHandler();
+        public delegate void DataLoadedEventHandler();
 
         private bool _busy = false;
         private bool _has_more_items = false;
         private int _current_page = 1;
+        private const int PAGE_SIZE = 20;
         public event DataLoadingEventHandler DataLoading;
         public event DataLoadedEventHandler DataLoaded;
 
-        //private Func<uint, Task<IList<T>>> func;
+        protected abstract Task<IList<T>> LoadMore(uint pageIndex, uint pageSize);
 
         private int TotalCount
         {
@@ -44,15 +44,8 @@ namespace ListViewDemo.Models
             }
         }
 
-        //public IncrementalLoadingList(Func<uint, Task<IList<T>>> _func)
-        //{
-        //    func = _func;
-        //    HasMoreItems = true;
-        //}
-
-        public IncrementalLoadingList()
+        protected IncrementalLoadingList()
         {
-            Debug.WriteLine(_current_page + "|" + TotalCount);
             HasMoreItems = true;
         }
 
@@ -66,38 +59,21 @@ namespace ListViewDemo.Models
 
         public IAsyncOperation<LoadMoreItemsResult> LoadMoreItemsAsync(uint count)
         {
-            return InnerLoadMoreItemsAsync(count).AsAsyncOperation();
+            return InnerLoadMoreItemsAsync().AsAsyncOperation();
         }
          
-        private async Task<LoadMoreItemsResult> InnerLoadMoreItemsAsync(uint expectedCount)
+        private async Task<LoadMoreItemsResult> InnerLoadMoreItemsAsync()
         {
             await Task.Delay(1000);
             Debug.WriteLine(_current_page + "|" + TotalCount);
 
             _busy = true;
             var actualCount = 0;
-            IList<Article> list = null;
+            IList<T> list = null;
             try
             {
                 OnDataLoading();
-                list = await Task.Run(() => new List<Article>()
-                {
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa1" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa2" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa3" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa5" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa6" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa7" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa8" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa9" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa10" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa11" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa12" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa13" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa14" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa15" },
-                    new Article() { Title ="aaaaaa", Content="aaaaaaaaaaaa16" }
-                });
+                list = await LoadMore((uint)_current_page, PAGE_SIZE);
             }
             catch (Exception)
             {
