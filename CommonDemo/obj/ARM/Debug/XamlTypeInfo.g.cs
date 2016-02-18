@@ -132,45 +132,53 @@ namespace CommonDemo.CommandDemo_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[18];
+            _typeNameTable = new string[22];
             _typeNameTable[0] = "CommonDemo.Commands.TestCommand";
             _typeNameTable[1] = "CommonDemo.Commands.CommandBase";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Boolean";
-            _typeNameTable[4] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[5] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[6] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[7] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[8] = "CommonDemo.Behaviors.BtnGetFocusBehavior";
-            _typeNameTable[9] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[10] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[11] = "String";
-            _typeNameTable[12] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
-            _typeNameTable[13] = "System.Windows.Input.ICommand";
-            _typeNameTable[14] = "Windows.UI.Xaml.Data.IValueConverter";
-            _typeNameTable[15] = "CommonDemo.MainPage";
-            _typeNameTable[16] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[17] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[4] = "CommonDemo.ViewModels.MainPageViewModel";
+            _typeNameTable[5] = "CommonDemo.ViewModels.ViewModelBase";
+            _typeNameTable[6] = "System.Windows.Input.ICommand";
+            _typeNameTable[7] = "Int32";
+            _typeNameTable[8] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[9] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[10] = "Windows.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[11] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[12] = "CommonDemo.Behaviors.TextboxBehavior";
+            _typeNameTable[13] = "String";
+            _typeNameTable[14] = "CommonDemo.Behaviors.BtnGetFocusBehavior";
+            _typeNameTable[15] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
+            _typeNameTable[16] = "Microsoft.Xaml.Interactivity.ActionCollection";
+            _typeNameTable[17] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
+            _typeNameTable[18] = "Windows.UI.Xaml.Data.IValueConverter";
+            _typeNameTable[19] = "CommonDemo.MainPage";
+            _typeNameTable[20] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[21] = "Windows.UI.Xaml.Controls.UserControl";
 
-            _typeTable = new global::System.Type[18];
+            _typeTable = new global::System.Type[22];
             _typeTable[0] = typeof(global::CommonDemo.Commands.TestCommand);
             _typeTable[1] = typeof(global::CommonDemo.Commands.CommandBase);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::System.Boolean);
-            _typeTable[4] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[5] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[6] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[8] = typeof(global::CommonDemo.Behaviors.BtnGetFocusBehavior);
-            _typeTable[9] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[10] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[11] = typeof(global::System.String);
-            _typeTable[12] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
-            _typeTable[13] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[14] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
-            _typeTable[15] = typeof(global::CommonDemo.MainPage);
-            _typeTable[16] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[17] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[4] = typeof(global::CommonDemo.ViewModels.MainPageViewModel);
+            _typeTable[5] = typeof(global::CommonDemo.ViewModels.ViewModelBase);
+            _typeTable[6] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[7] = typeof(global::System.Int32);
+            _typeTable[8] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[9] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[10] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
+            _typeTable[11] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[12] = typeof(global::CommonDemo.Behaviors.TextboxBehavior);
+            _typeTable[13] = typeof(global::System.String);
+            _typeTable[14] = typeof(global::CommonDemo.Behaviors.BtnGetFocusBehavior);
+            _typeTable[15] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
+            _typeTable[16] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
+            _typeTable[17] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
+            _typeTable[18] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
+            _typeTable[19] = typeof(global::CommonDemo.MainPage);
+            _typeTable[20] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[21] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -206,19 +214,22 @@ namespace CommonDemo.CommandDemo_XamlTypeInfo
         }
 
         private object Activate_0_TestCommand() { return new global::CommonDemo.Commands.TestCommand(); }
-        private object Activate_5_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_8_BtnGetFocusBehavior() { return new global::CommonDemo.Behaviors.BtnGetFocusBehavior(); }
-        private object Activate_9_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_10_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_12_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
-        private object Activate_15_MainPage() { return new global::CommonDemo.MainPage(); }
-        private void VectorAdd_5_BehaviorCollection(object instance, object item)
+        private object Activate_4_MainPageViewModel() { return new global::CommonDemo.ViewModels.MainPageViewModel(); }
+        private object Activate_5_ViewModelBase() { return new global::CommonDemo.ViewModels.ViewModelBase(); }
+        private object Activate_9_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_12_TextboxBehavior() { return new global::CommonDemo.Behaviors.TextboxBehavior(); }
+        private object Activate_14_BtnGetFocusBehavior() { return new global::CommonDemo.Behaviors.BtnGetFocusBehavior(); }
+        private object Activate_15_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
+        private object Activate_16_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
+        private object Activate_17_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
+        private object Activate_19_MainPage() { return new global::CommonDemo.MainPage(); }
+        private void VectorAdd_9_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_10_ActionCollection(object instance, object item)
+        private void VectorAdd_16_ActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
@@ -257,38 +268,76 @@ namespace CommonDemo.CommandDemo_XamlTypeInfo
                 xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 4:   //  CommonDemo.ViewModels.MainPageViewModel
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommonDemo.ViewModels.ViewModelBase"));
+                userType.Activator = Activate_4_MainPageViewModel;
+                userType.AddMemberName("TestCommand");
+                userType.AddMemberName("X");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  CommonDemo.ViewModels.ViewModelBase
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_5_ViewModelBase;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  System.Windows.Input.ICommand
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 7:   //  Int32
+                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 8:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 5:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 9:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_5_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_9_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 10:   //  Windows.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  Windows.UI.Xaml.DependencyObject
+            case 11:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  CommonDemo.Behaviors.BtnGetFocusBehavior
+            case 12:   //  CommonDemo.Behaviors.TextboxBehavior
+                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_12_TextboxBehavior;
+                userType.AddMemberName("InputStyle");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  String
+                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 14:   //  CommonDemo.Behaviors.BtnGetFocusBehavior
                 userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_8_BtnGetFocusBehavior;
+                userType.Activator = Activate_14_BtnGetFocusBehavior;
                 userType.AddMemberName("AssociatedObject");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
+            case 15:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
                 userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_9_EventTriggerBehavior;
+                userType.Activator = Activate_15_EventTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions");
                 userType.AddMemberName("Actions");
                 userType.AddMemberName("EventName");
@@ -297,20 +346,16 @@ namespace CommonDemo.CommandDemo_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  Microsoft.Xaml.Interactivity.ActionCollection
+            case 16:   //  Microsoft.Xaml.Interactivity.ActionCollection
                 userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_10_ActionCollection;
+                userType.CollectionAdd = VectorAdd_16_ActionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 11:   //  String
-                xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 12:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
+            case 17:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
                 userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_12_InvokeCommandAction;
+                userType.Activator = Activate_17_InvokeCommandAction;
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParameter");
                 userType.AddMemberName("InputConverter");
@@ -319,28 +364,22 @@ namespace CommonDemo.CommandDemo_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 13:   //  System.Windows.Input.ICommand
-                userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 14:   //  Windows.UI.Xaml.Data.IValueConverter
+            case 18:   //  Windows.UI.Xaml.Data.IValueConverter
                 xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 15:   //  CommonDemo.MainPage
+            case 19:   //  CommonDemo.MainPage
                 userType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_MainPage;
+                userType.Activator = Activate_19_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Windows.UI.Xaml.Controls.Page
+            case 20:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  Windows.UI.Xaml.Controls.UserControl
+            case 21:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -353,95 +392,123 @@ namespace CommonDemo.CommandDemo_XamlTypeInfo
             var that = (global::CommonDemo.Commands.TestCommand)instance;
             return that.CanExecute;
         }
-        private object get_1_Interaction_Behaviors(object instance)
+        private object get_1_MainPageViewModel_TestCommand(object instance)
+        {
+            var that = (global::CommonDemo.ViewModels.MainPageViewModel)instance;
+            return that.TestCommand;
+        }
+        private void set_1_MainPageViewModel_TestCommand(object instance, object Value)
+        {
+            var that = (global::CommonDemo.ViewModels.MainPageViewModel)instance;
+            that.TestCommand = (global::System.Windows.Input.ICommand)Value;
+        }
+        private object get_2_MainPageViewModel_X(object instance)
+        {
+            var that = (global::CommonDemo.ViewModels.MainPageViewModel)instance;
+            return that.X;
+        }
+        private void set_2_MainPageViewModel_X(object instance, object Value)
+        {
+            var that = (global::CommonDemo.ViewModels.MainPageViewModel)instance;
+            that.X = (global::System.Int32)Value;
+        }
+        private object get_3_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_1_Interaction_Behaviors(object instance, object Value)
+        private void set_3_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_2_BtnGetFocusBehavior_AssociatedObject(object instance)
+        private object get_4_TextboxBehavior_InputStyle(object instance)
+        {
+            return global::CommonDemo.Behaviors.TextboxBehavior.GetInputStyle((global::Windows.UI.Xaml.DependencyObject)instance);
+        }
+        private void set_4_TextboxBehavior_InputStyle(object instance, object Value)
+        {
+            global::CommonDemo.Behaviors.TextboxBehavior.SetInputStyle((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.String)Value);
+        }
+        private object get_5_BtnGetFocusBehavior_AssociatedObject(object instance)
         {
             var that = (global::CommonDemo.Behaviors.BtnGetFocusBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_3_EventTriggerBehavior_Actions(object instance)
+        private object get_6_EventTriggerBehavior_Actions(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.Actions;
         }
-        private object get_4_EventTriggerBehavior_EventName(object instance)
+        private object get_7_EventTriggerBehavior_EventName(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.EventName;
         }
-        private void set_4_EventTriggerBehavior_EventName(object instance, object Value)
+        private void set_7_EventTriggerBehavior_EventName(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.EventName = (global::System.String)Value;
         }
-        private object get_5_EventTriggerBehavior_SourceObject(object instance)
+        private object get_8_EventTriggerBehavior_SourceObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.SourceObject;
         }
-        private void set_5_EventTriggerBehavior_SourceObject(object instance, object Value)
+        private void set_8_EventTriggerBehavior_SourceObject(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.SourceObject = (global::System.Object)Value;
         }
-        private object get_6_EventTriggerBehavior_AssociatedObject(object instance)
+        private object get_9_EventTriggerBehavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_7_InvokeCommandAction_Command(object instance)
+        private object get_10_InvokeCommandAction_Command(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.Command;
         }
-        private void set_7_InvokeCommandAction_Command(object instance, object Value)
+        private void set_10_InvokeCommandAction_Command(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.Command = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_8_InvokeCommandAction_CommandParameter(object instance)
+        private object get_11_InvokeCommandAction_CommandParameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.CommandParameter;
         }
-        private void set_8_InvokeCommandAction_CommandParameter(object instance, object Value)
+        private void set_11_InvokeCommandAction_CommandParameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.CommandParameter = (global::System.Object)Value;
         }
-        private object get_9_InvokeCommandAction_InputConverter(object instance)
+        private object get_12_InvokeCommandAction_InputConverter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverter;
         }
-        private void set_9_InvokeCommandAction_InputConverter(object instance, object Value)
+        private void set_12_InvokeCommandAction_InputConverter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverter = (global::Windows.UI.Xaml.Data.IValueConverter)Value;
         }
-        private object get_10_InvokeCommandAction_InputConverterParameter(object instance)
+        private object get_13_InvokeCommandAction_InputConverterParameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverterParameter;
         }
-        private void set_10_InvokeCommandAction_InputConverterParameter(object instance, object Value)
+        private void set_13_InvokeCommandAction_InputConverterParameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterParameter = (global::System.Object)Value;
         }
-        private object get_11_InvokeCommandAction_InputConverterLanguage(object instance)
+        private object get_14_InvokeCommandAction_InputConverterLanguage(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverterLanguage;
         }
-        private void set_11_InvokeCommandAction_InputConverterLanguage(object instance, object Value)
+        private void set_14_InvokeCommandAction_InputConverterLanguage(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterLanguage = (global::System.String)Value;
@@ -460,81 +527,101 @@ namespace CommonDemo.CommandDemo_XamlTypeInfo
                 xamlMember.Getter = get_0_TestCommand_CanExecute;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "CommonDemo.ViewModels.MainPageViewModel.TestCommand":
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommonDemo.ViewModels.MainPageViewModel");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "TestCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_1_MainPageViewModel_TestCommand;
+                xamlMember.Setter = set_1_MainPageViewModel_TestCommand;
+                break;
+            case "CommonDemo.ViewModels.MainPageViewModel.X":
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommonDemo.ViewModels.MainPageViewModel");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "X", "Int32");
+                xamlMember.Getter = get_2_MainPageViewModel_X;
+                xamlMember.Setter = set_2_MainPageViewModel_X;
+                break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_1_Interaction_Behaviors;
-                xamlMember.Setter = set_1_Interaction_Behaviors;
+                xamlMember.Getter = get_3_Interaction_Behaviors;
+                xamlMember.Setter = set_3_Interaction_Behaviors;
+                break;
+            case "CommonDemo.Behaviors.TextboxBehavior.InputStyle":
+                userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommonDemo.Behaviors.TextboxBehavior");
+                xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "InputStyle", "String");
+                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_4_TextboxBehavior_InputStyle;
+                xamlMember.Setter = set_4_TextboxBehavior_InputStyle;
                 break;
             case "CommonDemo.Behaviors.BtnGetFocusBehavior.AssociatedObject":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommonDemo.Behaviors.BtnGetFocusBehavior");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_2_BtnGetFocusBehavior_AssociatedObject;
+                xamlMember.Getter = get_5_BtnGetFocusBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_EventTriggerBehavior_Actions;
+                xamlMember.Getter = get_6_EventTriggerBehavior_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "EventName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_4_EventTriggerBehavior_EventName;
-                xamlMember.Setter = set_4_EventTriggerBehavior_EventName;
+                xamlMember.Getter = get_7_EventTriggerBehavior_EventName;
+                xamlMember.Setter = set_7_EventTriggerBehavior_EventName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_5_EventTriggerBehavior_SourceObject;
-                xamlMember.Setter = set_5_EventTriggerBehavior_SourceObject;
+                xamlMember.Getter = get_8_EventTriggerBehavior_SourceObject;
+                xamlMember.Setter = set_8_EventTriggerBehavior_SourceObject;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.AssociatedObject":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_6_EventTriggerBehavior_AssociatedObject;
+                xamlMember.Getter = get_9_EventTriggerBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.Command":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_7_InvokeCommandAction_Command;
-                xamlMember.Setter = set_7_InvokeCommandAction_Command;
+                xamlMember.Getter = get_10_InvokeCommandAction_Command;
+                xamlMember.Setter = set_10_InvokeCommandAction_Command;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.CommandParameter":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_8_InvokeCommandAction_CommandParameter;
-                xamlMember.Setter = set_8_InvokeCommandAction_CommandParameter;
+                xamlMember.Getter = get_11_InvokeCommandAction_CommandParameter;
+                xamlMember.Setter = set_11_InvokeCommandAction_CommandParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverter":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "InputConverter", "Windows.UI.Xaml.Data.IValueConverter");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_9_InvokeCommandAction_InputConverter;
-                xamlMember.Setter = set_9_InvokeCommandAction_InputConverter;
+                xamlMember.Getter = get_12_InvokeCommandAction_InputConverter;
+                xamlMember.Setter = set_12_InvokeCommandAction_InputConverter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterParameter":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "InputConverterParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_10_InvokeCommandAction_InputConverterParameter;
-                xamlMember.Setter = set_10_InvokeCommandAction_InputConverterParameter;
+                xamlMember.Getter = get_13_InvokeCommandAction_InputConverterParameter;
+                xamlMember.Setter = set_13_InvokeCommandAction_InputConverterParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterLanguage":
                 userType = (global::CommonDemo.CommandDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::CommonDemo.CommandDemo_XamlTypeInfo.XamlMember(this, "InputConverterLanguage", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_11_InvokeCommandAction_InputConverterLanguage;
-                xamlMember.Setter = set_11_InvokeCommandAction_InputConverterLanguage;
+                xamlMember.Getter = get_14_InvokeCommandAction_InputConverterLanguage;
+                xamlMember.Setter = set_14_InvokeCommandAction_InputConverterLanguage;
                 break;
             }
             return xamlMember;

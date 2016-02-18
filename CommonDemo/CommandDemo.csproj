@@ -99,6 +99,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Behaviors\BtnGetFocusBehavior.cs" />
+    <Compile Include="Behaviors\TextboxBehavior.cs" />
     <Compile Include="Commands\CommandBase.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Commands\TestCommand.cs" />
@@ -107,6 +108,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

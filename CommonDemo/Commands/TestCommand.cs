@@ -9,7 +9,7 @@ namespace CommonDemo.Commands
 
         protected override void Execute(object parameter)
         {
-            Debug.WriteLine(parameter);
+            Debug.WriteLine(parameter + ".....");
         }
     }
 }

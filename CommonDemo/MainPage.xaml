@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CommonDemo"
+    xmlns:vm="using:CommonDemo.ViewModels"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
@@ -10,13 +11,18 @@
     xmlns:metadata="using:System.Reflection.Metadata"
     xmlns:behaviors="using:CommonDemo.Behaviors"
     mc:Ignorable="d">
+    
+    <Page.Resources>
+        <vm:MainPageViewModel x:Key="mainPageViewModel"></vm:MainPageViewModel>
+    </Page.Resources>
 
-    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="btn" Content="TestWithActionAndParameter">
+
+    <StackPanel DataContext="{StaticResource mainPageViewModel}" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="btn" Content="TestWithActionAndParameter" Width="{Binding X}">
             <interactivity:Interaction.Behaviors>
                 <behaviors:BtnGetFocusBehavior />
                 <core:EventTriggerBehavior EventName="DoubleTapped">
-                    <core:InvokeCommandAction Command="{StaticResource TestCommand}" CommandParameter="aaa"/>
+                    <core:InvokeCommandAction Command="{Binding TestCommand}" CommandParameter="aaa"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </Button>
@@ -26,5 +32,6 @@
                 <behaviors:BtnGetFocusBehavior />
             </interactivity:Interaction.Behaviors>
         </Ellipse>
+        <TextBox Height="72" Width="100"  behaviors:TextboxBehavior.InputStyle="xxx" Text="这是一个测试"></TextBox>
     </StackPanel>
 </Page>

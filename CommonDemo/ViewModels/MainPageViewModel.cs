@@ -4,12 +4,41 @@ using CommonDemo.Commands;
 
 namespace CommonDemo.ViewModels
 {
-    public class MainPageViewModel
+    public class MainPageViewModel : ViewModelBase
     {
-        public ICommand TestCommand { get; private set; }
+
+        private ICommand _testCommand;
+        public ICommand TestCommand
+        {
+            get
+            {
+                return _testCommand;
+            }
+            set
+            {
+                _testCommand = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private int _x;
+        public int X
+        {
+            get
+            {
+                return _x;
+            }
+            set
+            {
+                _x = value;
+                OnPropertyChanged();
+            }
+        }
+
         public MainPageViewModel()
         {
             TestCommand = new RelayCommand(TestCmd);
+            X = 100;
         }
 
         public void TestCmd(object parameter)

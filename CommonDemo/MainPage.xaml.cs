@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using CommonDemo.ViewModels;
 
 //“空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409 上有介绍
 
@@ -25,6 +26,7 @@ namespace CommonDemo
         public MainPage()
         {
             this.InitializeComponent();
+            //this.DataContext = new MainPageViewModel();
         }
     }
 }
