@@ -7,14 +7,13 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage.Streams;
 using Windows.Web.Http;
 using Newtonsoft.Json;
 
 namespace ListViewDemo
 {
-    
-
-    class HttpHelper
+    static class HttpHelper
     {
         /// <summary>
         /// 向服务器发送get请求  返回服务器回复数据
@@ -39,6 +38,32 @@ namespace ListViewDemo
             }
 
         }
+
+
+        /// <summary>
+        /// 向服务器发送get请求  返回服务器回复数据(bytes)
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static async Task<IBuffer> SendGetRequestAsBytes(string url)
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                Uri uri = new Uri(url);
+
+                HttpResponseMessage response = await client.GetAsync(uri);
+                response.EnsureSuccessStatusCode();
+
+                return await response.Content.ReadAsBufferAsync();
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+
         /// <summary>
         /// 向服务器发送post请求 返回服务器回复数据
         /// </summary>
