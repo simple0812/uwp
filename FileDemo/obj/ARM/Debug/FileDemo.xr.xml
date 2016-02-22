@@ -29,5 +29,15 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="FileDemo.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="FileDemo.StringView" />
   </Roots.RootTypes>
 </Roots>

@@ -194,3 +194,8 @@ E:\git_projects\UWP\uwp\FileDemo\obj\ARM\Debug\qualifiers.txt
 E:\git_projects\UWP\uwp\FileDemo\obj\ARM\Debug\qualifiers.txt.intermediate
 E:\git_projects\UWP\uwp\FileDemo\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 E:\git_projects\UWP\uwp\FileDemo\obj\ARM\Debug\ProjectArchitectures.txt
+E:\git_projects\UWP\uwp\FileDemo\bin\ARM\Debug\StringView.xbf
+E:\git_projects\UWP\uwp\FileDemo\obj\ARM\Debug\StringView.g.i.cs
+E:\git_projects\UWP\uwp\FileDemo\obj\ARM\Debug\StringView.g.cs
+E:\git_projects\UWP\uwp\FileDemo\obj\ARM\Debug\StringView.xaml
+E:\git_projects\UWP\uwp\FileDemo\obj\ARM\Debug\StringView.xbf

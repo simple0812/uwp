@@ -13,11 +13,13 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBox x:ConnectionId='1' Name="txt" TextWrapping="Wrap" Grid.Row="0"></TextBox>
         <Button x:ConnectionId='2' Grid.Row="1" Width="140" Content="保存" Height="50"                     ></Button>
         <Button x:ConnectionId='3' Grid.Row="2" Width="140" Content="读取" Height="50"                     ></Button>
         <Button x:ConnectionId='4' Grid.Row="3" Width="140" Content="清空" Height="50"                      ></Button>
+        <Button x:ConnectionId='5' Grid.Row="4" Width="140" Content="跳转" Height="50"                         ></Button>
     </Grid>
 </Page>
 

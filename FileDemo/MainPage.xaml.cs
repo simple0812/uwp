@@ -58,6 +58,11 @@ namespace FileDemo
             txt.Text = "";
         }
 
+        private void Navigate_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof (StringView), null);
+        }
+
         private async void Save_OnClick(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt.Text))
@@ -74,7 +79,7 @@ namespace FileDemo
                 {
                     using (StreamWriter sw = new StreamWriter(stream))
                     {
-                        sw.Write(txt.Text);
+                        await sw.WriteAsync(txt.Text);
                         throw new Exception("xxx");
                     }
                 }
