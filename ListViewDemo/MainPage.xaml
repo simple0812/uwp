@@ -5,16 +5,34 @@
     xmlns:local="using:ListViewDemo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="xxx" x:Name="yyy" TargetType="Button">
+            <Setter Property="Width" Value="100"></Setter>
+        </Style>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView Name="lv">
+
+        <ListView Name="lv" >
+            <ListView.ItemContainerTransitions>
+                <TransitionCollection>
+                    <AddDeleteThemeTransition />
+                </TransitionCollection>
+            </ListView.ItemContainerTransitions>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Vertical" BorderThickness="2" BorderBrush="Red">
+                    <StackPanel Opacity="0" Loaded="Item_OnLoaded" Orientation="Vertical" BorderThickness="2" BorderBrush="Red">
                         <TextBlock Text="{Binding Title}"></TextBlock>
                         <TextBlock Text="{Binding Content}"></TextBlock>
                     </StackPanel>
+                    <interactivity:Interaction.Behaviors >
+                        <Storyboard>
+                        <DoubleAnimation From="10" To="20"></DoubleAnimation>
+                        </Storyboard>
+                    </interactivity:Interaction.Behaviors>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

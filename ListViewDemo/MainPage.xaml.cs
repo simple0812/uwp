@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -14,6 +15,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Windows.Web.Http;
 using ListViewDemo.Models;
@@ -27,6 +29,7 @@ namespace ListViewDemo
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private int _span = 0;
         public MainPage()
         {
             this.InitializeComponent();
@@ -49,6 +52,25 @@ namespace ListViewDemo
 
             lv.ItemsSource = list;
         }
-       
+
+        private void Item_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            _span += 1000;
+            if (_span >= 1000*20) _span = 1000;
+            
+            var sp = sender as StackPanel;
+            var sb = new Storyboard();
+            DoubleAnimation da = new DoubleAnimation
+            {
+                From = 0,
+                To = 1,
+                Duration = new TimeSpan(0, 0, 0, _span / 1000),
+                FillBehavior = FillBehavior.HoldEnd
+            };
+            Storyboard.SetTarget(da, sp);
+            Storyboard.SetTargetProperty(da, "Opacity");
+            sb.Children.Add(da);
+            sb.Begin();
+        }
     }
 }
