@@ -1,1 +1,1 @@
-E:\git_projects\UWP\uwp\CommonDemo\CommonDemo.csproj;x64
+F:\git_projects\uwp\CommonDemo\CommandDemo.csproj;x64

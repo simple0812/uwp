@@ -11,7 +11,7 @@
     xmlns:metadata="using:System.Reflection.Metadata"
     xmlns:behaviors="using:CommonDemo.Behaviors"
     mc:Ignorable="d">
-    
+
     <Page.Resources>
         <vm:MainPageViewModel x:Key="mainPageViewModel"></vm:MainPageViewModel>
     </Page.Resources>
@@ -32,6 +32,6 @@
                 <behaviors:BtnGetFocusBehavior />
             </interactivity:Interaction.Behaviors>
         </Ellipse>
-        <TextBox Height="72" Width="100"  behaviors:TextboxBehavior.InputStyle="xxx" Text="这是一个测试"></TextBox>
+        <TextBox Height="72"  behaviors:TextboxBehavior.InputStyle="xxx" Text="这是一个测试" Margin="0,0,10,0"/>
     </StackPanel>
 </Page>

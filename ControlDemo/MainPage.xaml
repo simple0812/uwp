@@ -5,6 +5,7 @@
     xmlns:local="using:ControlDemo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="using:WinRTXamlToolkit.Controls"
     mc:Ignorable="d">
     <Page.Transitions>
         <TransitionCollection>
@@ -23,7 +24,24 @@
             </Grid>
         </DataTemplate>
     </Page.Resources>
-    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel Margin="0 40 0 0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Text="Foo" Tapped="TextBlock_OnTapped">
+            <FlyoutBase.AttachedFlyout>
+                <Flyout>
+                     <Flyout.FlyoutPresenterStyle>
+                        <Style TargetType="FlyoutPresenter">
+                            <Setter Property="ScrollViewer.ZoomMode" Value="Enabled"/>
+                            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Padding" Value="0"></Setter>
+                            <Setter Property="MinWidth" Value="600"></Setter>
+                            <Setter Property="Background" Value="OrangeRed"></Setter>
+                        </Style>
+                    </Flyout.FlyoutPresenterStyle>
+                    <toolkit:Calendar SelectedDatesChanged="Calendar_OnSelectedDatesChanged" BorderThickness="0" Padding="0" Margin="0" Width="600" PointerWheelChanged="UIElement_OnPointerWheelChanged"></toolkit:Calendar>
+                </Flyout>
+            </FlyoutBase.AttachedFlyout>
+        </TextBlock>
         <Button Content="test" x:Name="btn">
             <Button.Flyout>
                 <Flyout>

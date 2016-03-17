@@ -132,15 +132,23 @@ namespace StyleDemo.StyleDemo_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
-            _typeNameTable[0] = "StyleDemo.MainPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable = new string[7];
+            _typeNameTable[0] = "StyleDemo.Models.Person";
+            _typeNameTable[1] = "Object";
+            _typeNameTable[2] = "Int32";
+            _typeNameTable[3] = "String";
+            _typeNameTable[4] = "StyleDemo.MainPage";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "Windows.UI.Xaml.Controls.UserControl";
 
-            _typeTable = new global::System.Type[3];
-            _typeTable[0] = typeof(global::StyleDemo.MainPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable = new global::System.Type[7];
+            _typeTable[0] = typeof(global::StyleDemo.Models.Person);
+            _typeTable[1] = typeof(global::System.Object);
+            _typeTable[2] = typeof(global::System.Int32);
+            _typeTable[3] = typeof(global::System.String);
+            _typeTable[4] = typeof(global::StyleDemo.MainPage);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -175,7 +183,8 @@ namespace StyleDemo.StyleDemo_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::StyleDemo.MainPage(); }
+        private object Activate_0_Person() { return new global::StyleDemo.Models.Person(); }
+        private object Activate_4_MainPage() { return new global::StyleDemo.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -187,18 +196,39 @@ namespace StyleDemo.StyleDemo_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  StyleDemo.MainPage
-                userType = new global::StyleDemo.StyleDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+            case 0:   //  StyleDemo.Models.Person
+                userType = new global::StyleDemo.StyleDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_0_Person;
+                userType.AddMemberName("Age");
+                userType.AddMemberName("Name");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Object
                 xamlType = new global::StyleDemo.StyleDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+            case 2:   //  Int32
+                xamlType = new global::StyleDemo.StyleDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  String
+                xamlType = new global::StyleDemo.StyleDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 4:   //  StyleDemo.MainPage
+                userType = new global::StyleDemo.StyleDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::StyleDemo.StyleDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::StyleDemo.StyleDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -206,11 +236,47 @@ namespace StyleDemo.StyleDemo_XamlTypeInfo
         }
 
 
+        private object get_0_Person_Age(object instance)
+        {
+            var that = (global::StyleDemo.Models.Person)instance;
+            return that.Age;
+        }
+        private void set_0_Person_Age(object instance, object Value)
+        {
+            var that = (global::StyleDemo.Models.Person)instance;
+            that.Age = (global::System.Int32)Value;
+        }
+        private object get_1_Person_Name(object instance)
+        {
+            var that = (global::StyleDemo.Models.Person)instance;
+            return that.Name;
+        }
+        private void set_1_Person_Name(object instance, object Value)
+        {
+            var that = (global::StyleDemo.Models.Person)instance;
+            that.Name = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::StyleDemo.StyleDemo_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::StyleDemo.StyleDemo_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "StyleDemo.Models.Person.Age":
+                userType = (global::StyleDemo.StyleDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("StyleDemo.Models.Person");
+                xamlMember = new global::StyleDemo.StyleDemo_XamlTypeInfo.XamlMember(this, "Age", "Int32");
+                xamlMember.Getter = get_0_Person_Age;
+                xamlMember.Setter = set_0_Person_Age;
+                break;
+            case "StyleDemo.Models.Person.Name":
+                userType = (global::StyleDemo.StyleDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("StyleDemo.Models.Person");
+                xamlMember = new global::StyleDemo.StyleDemo_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_1_Person_Name;
+                xamlMember.Setter = set_1_Person_Name;
+                break;
+            }
             return xamlMember;
         }
     }

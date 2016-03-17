@@ -1,0 +1,78 @@
+﻿<UserControl
+    x:Class="GridViewDemo.CustomDatePicker"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GridViewDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:WinRTXamlToolkit.Controls"
+    xmlns:primitives="using:WinRTXamlToolkit.Controls.Primitives"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Style x:Key="MyGridViewItemPresenterTemplate" TargetType="GridViewItem">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GridViewItem">
+                        <GridViewItemPresenter
+                            Width="60"
+                            Height="60"
+                            SelectedBackground="Blue" 
+                            SelectedPointerOverBackground="Blue"
+                            PointerOverBackground="LightGray"
+                            HorizontalAlignment="Center"
+                            GridViewItemPresenterHorizontalContentAlignment="Center"
+                            GridViewItemPresenterVerticalContentAlignment="Center"
+                             />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid >
+        <CalendarView x:Name="calendar" Width="600" Height="450" 
+                         SelectionMode="Single"
+                         SelectedDatesChanged="Calendar_OnSelectedDatesChanged"></CalendarView>
+        <GridView Width="600" Height="450" MaxWidth="600" 
+                  AllowDrop="True" 
+                  x:Name="gvHour"
+                  ItemContainerStyle="{StaticResource MyGridViewItemPresenterTemplate}"
+                  Visibility="Collapsed"
+                  IsItemClickEnabled="True"
+                  ItemClick="GvHour_OnItemClick">
+            <GridView.Header>
+                <Button x:Name="btnHour" Click="BtnHour_OnClick"  Content="返回日期选择"></Button>
+            </GridView.Header>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}"></TextBlock>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <GridView Width="600" Height="450" MaxWidth="600" 
+                  AllowDrop="True" 
+                  x:Name="gvMinute"
+                  ItemContainerStyle="{StaticResource MyGridViewItemPresenterTemplate}"
+                  Visibility="Collapsed"
+                  IsItemClickEnabled="True"
+                  ItemClick="GvMinute_OnItemClick">
+            <GridView.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btnMinute" Click="BtnMinute_OnClick" Content="返回小时选择"></Button>
+                    <Button x:Name="btnOk" Click="BtnOk_OnClick" Content="OK"></Button>
+                    <Button x:Name="btnCancel" Click="BtnCancel_OnClick" Content="Cancel"></Button>
+                </StackPanel>
+            </GridView.Header>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}"></TextBlock>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</UserControl>

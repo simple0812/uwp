@@ -1,1 +1,1 @@
-E:\git_projects\UWP\uwp\Watch\Watch.csproj;x64
+F:\git_projects\uwp\Watch\Watch.csproj;x64

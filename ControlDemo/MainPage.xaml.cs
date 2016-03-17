@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using WinRTXamlToolkit.Controls;
 
 //“空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409 上有介绍
 
@@ -42,7 +43,7 @@ namespace ControlDemo
             if (element != null)
             {
                 var flyout = FlyoutBase.GetAttachedFlyout(element);
-                if (flyout!= null)
+                if (flyout != null)
                 {
                     flyout.ShowAt(element);
                     flyout.Opened += async (obj, args) =>
@@ -50,6 +51,27 @@ namespace ControlDemo
                         await Task.Delay(2000);
                         flyout.Hide();
                     };
+                }
+            }
+        }
+
+        private void TextBlock_OnTapped(object sender, TappedRoutedEventArgs e)
+        {
+            FrameworkElement element = sender as FrameworkElement;
+            if (element != null)
+            {
+                var flyout = FlyoutBase.GetAttachedFlyout(element) as Flyout;
+
+                var calender = flyout?.Content as Calendar;
+
+                if (calender != null)
+                {
+                    calender.SelectedDate = DateTime.Now;
+                    calender.DisplayDate = DateTime.Now;
+                    calender.DisplayDateStart = DateTime.Now;
+                    calender.DisplayDateEnd = DateTime.Now.Add(new TimeSpan(30, 0, 0, 0));
+
+                    flyout.ShowAt(element);
                 }
             }
         }
@@ -62,6 +84,7 @@ namespace ControlDemo
                 FlyoutBase.ShowAttachedFlyout(element);
             }
         }
+
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             // VisualTreeHelper 中新增了 GetOpenPopups() 方法，可以获取可视树中的全部 Popup 对象
@@ -71,6 +94,7 @@ namespace ControlDemo
                 popup.IsOpen = false;
             }
         }
+
         private void pp1_Click(object sender, RoutedEventArgs e)
         {
             pp1.IsOpen = true;
@@ -79,6 +103,20 @@ namespace ControlDemo
         private void pp2_Click(object sender, RoutedEventArgs e)
         {
             pp2.IsOpen = true;
+        }
+
+        private void UIElement_OnPointerWheelChanged(object sender, PointerRoutedEventArgs e)
+        {
+            Debug.WriteLine("hello world");
+        }
+
+        private void Calendar_OnSelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var calender = sender as Calendar;
+            if (calender != null)
+            {
+                Debug.WriteLine(calender.SelectedDate);
+            }
         }
     }
 }
